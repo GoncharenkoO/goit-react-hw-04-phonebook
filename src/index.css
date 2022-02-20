@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  color: #212121;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

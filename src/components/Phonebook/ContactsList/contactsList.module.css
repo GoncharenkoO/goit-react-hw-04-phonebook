@@ -1,0 +1,33 @@
+.list {
+  font-size: 18px;
+  margin-top: 30px;
+  color: #566573;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 12px;
+  width: 100px;
+  height: auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #97cb7d;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
