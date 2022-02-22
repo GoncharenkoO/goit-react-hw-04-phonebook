@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './contactsList.module.css';
 
@@ -19,8 +20,15 @@ function ContactsList({ contacts, onDeleteContact }) {
   return <ul className={styles.list}>{element}</ul>;
 }
 
-export default ContactsList;
+export default memo(ContactsList);
 
 ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
