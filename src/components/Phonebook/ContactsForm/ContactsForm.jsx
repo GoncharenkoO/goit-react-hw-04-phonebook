@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import { initialState } from './initialState';
 import styles from './contactsForm.module.css';
 
 const ContactsForm = ({ onSubmit }) => {
+  // console.log('render');
   const [contact, setContact] = useState({ ...initialState });
 
   const handleChange = ({ target }) => {
@@ -60,7 +61,7 @@ const ContactsForm = ({ onSubmit }) => {
   );
 };
 
-export default ContactsForm;
+export default memo(ContactsForm);
 
 ContactsForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,

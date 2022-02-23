@@ -28,20 +28,23 @@ const Phonebook = () => {
 
   const handleChange = useCallback(({ target }) => setFilter(target.value), []);
 
-  const addContact = ({ name, number }) => {
-    setContacts(prevState => {
-      const newContact = {
-        name,
-        number,
-        id: nanoid(),
-      };
-      return [...prevState, newContact];
-    });
-    if (contacts.find(contact => contact.name === name)) {
-      alert(`${name} is already in contacts`);
-      return;
-    }
-  };
+  const addContact = useCallback(
+    ({ name, number }) => {
+      setContacts(prevState => {
+        const newContact = {
+          name,
+          number,
+          id: nanoid(),
+        };
+        return [...prevState, newContact];
+      });
+      if (contacts.find(contact => contact.name === name)) {
+        alert(`${name} is already in contacts`);
+        return;
+      }
+    },
+    [contacts]
+  );
 
   const onDeleteContact = contactId => {
     setContacts(prevState => {

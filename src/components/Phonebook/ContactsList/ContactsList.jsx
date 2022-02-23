@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './contactsList.module.css';
 
@@ -20,7 +19,7 @@ function ContactsList({ contacts, onDeleteContact }) {
   return <ul className={styles.list}>{element}</ul>;
 }
 
-export default memo(ContactsList);
+export default ContactsList;
 
 ContactsList.propTypes = {
   contacts: PropTypes.arrayOf(
